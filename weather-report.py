@@ -20,7 +20,7 @@ maps = {
 }
 
 city = input("Please enter the US city you want a forecast for: ")
-geolocator = Nominatim(user_agent="weather-cli-test")
+geolocator = Nominatim(user_agent="weather-report-user")
 location = geolocator.geocode(city)
 weathersite = "https://forecast.weather.gov/MapClick.php?lat={}&lon={}&unit=0&lg=english&FcstType=text&TextType=1".format(location.latitude, location.longitude)
 searchpage = requests.get(weathersite)
